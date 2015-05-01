@@ -1,0 +1,3 @@
+﻿interface IModule {
+    name: String;
+}
