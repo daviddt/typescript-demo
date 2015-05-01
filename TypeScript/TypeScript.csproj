@@ -59,6 +59,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dest\js\scripts.compiled.js" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -74,10 +75,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\ts\Configuration\Configuration.ts" />
+    <TypeScriptCompile Include="src\ts\Interactions\Code.ts" />
+    <TypeScriptCompile Include="src\ts\Interactions\IInteraction.ts" />
     <TypeScriptCompile Include="src\ts\Modules\IModule.ts" />
     <TypeScriptCompile Include="src\ts\Modules\Module.ts" />
     <TypeScriptCompile Include="src\ts\Modules\Rewards.ts" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

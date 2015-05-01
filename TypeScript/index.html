@@ -4,7 +4,19 @@
     <title></title>
 </head>
 <body>
+    <div id="app"></div>
+    <script src="dest/js/scripts.compiled.js"></script>
+    <script>
+        (function () {
+            var module = new Rewards();
+            module.addInteraction(new Code(5));
 
-    <script async src="dest/js/scripts.compiled.js"></script>
+            document.getElementById("app").innerHTML = module.render();
+            //module.configuration = new Configuration();
+            //module.configuration.interactions = [new Code(3)];
+        })();
+
+    </script>
+    
 </body>
 </html>

@@ -1,3 +1,4 @@
 ﻿class Module implements IModule {
-    public name: String;
+    public name: string;
+    public configuration: Configuration
 }
