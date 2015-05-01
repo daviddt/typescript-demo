@@ -1,0 +1,2 @@
+﻿class Rewards extends Module {
+}
