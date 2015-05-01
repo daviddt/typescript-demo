@@ -41,3 +41,21 @@ var Rewards = (function (_super) {
     };
     return Rewards;
 })(Module);
+var codeRegexp = /^([0-9]|[a-z]){5}-([0-9]|[a-z]){5}-([0-9]|[a-z]){5}$/ig;
+var CodeValidator = (function () {
+    function CodeValidator() {
+    }
+    CodeValidator.prototype.isAcceptable = function (s) {
+        return codeRegexp.test(s);
+    };
+    return CodeValidator;
+})();
+var lettersRegexp = /^[A-Za-z]+$/;
+var LettersOnlyValidator = (function () {
+    function LettersOnlyValidator() {
+    }
+    LettersOnlyValidator.prototype.isAcceptable = function (s) {
+        return lettersRegexp.test(s);
+    };
+    return LettersOnlyValidator;
+})();
