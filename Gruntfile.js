@@ -3,8 +3,11 @@ module.exports = function(grunt) {
 	grunt.initConfig({
     	typescript: {
     		base: {
-      			src: ['TypeScript/src/ts/**/*.ts'],
-      			dest: 'TypeScript/dest/js/scripts.compiled.js'
+      			src: 'src/ts/**/*',
+      			dest: 'dest/js/scripts.compiled.js',
+				options: {
+					basePath: 'TypeScript'
+				}
     		}
 		},
 		watch: {
